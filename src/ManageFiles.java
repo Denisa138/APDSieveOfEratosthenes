@@ -4,18 +4,11 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ManageFiles {
     private String inputFileName;
     private String outputFileName;
-    private int startInterval;
-    private int endInterval;
-    private int totalNumbers;
     private int[] inputNumbers;
 
-    public ManageFiles(String inputFileName, String outputFileName, int start, int end, int totalNumbers) {
+    public ManageFiles(String inputFileName, String outputFileName) {
         this.inputFileName = inputFileName;
         this.outputFileName = outputFileName;
-        this.startInterval = start;
-        this.endInterval = end;
-        this.totalNumbers = totalNumbers;
-        this.inputNumbers = new int[totalNumbers];
     }
 
     private void createFile(String fileName) {
@@ -38,7 +31,9 @@ public class ManageFiles {
         createFile(outputFileName);
     }
 
-    public void generateNumbers() {
+    public void generateNumbers(int startInterval, int endInterval, int totalNumbers) {
+       inputNumbers = new int[totalNumbers];
+
         // generate and write numbers in the input file
         try (
                 BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(inputFileName + ".txt"))) {
