@@ -1,3 +1,5 @@
+package SequentialImplementation;
+
 import java.util.stream.IntStream;
 
 //Java class used to calculate all prime numbers small or equal than a given number, n.
