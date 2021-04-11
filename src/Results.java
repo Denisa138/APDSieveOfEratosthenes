@@ -1,7 +1,3 @@
-package SequentialImplementation;
-
-import SequentialImplementation.ManageFiles;
-
 import java.io.IOException;
 
 public class Results {
