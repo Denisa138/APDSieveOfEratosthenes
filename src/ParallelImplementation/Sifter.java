@@ -110,7 +110,7 @@ public class Sifter extends Thread {
                 }
                 else
                 {
-                    System.out.println(("Prime numbers " + primeNumbers.getPrimeNumbers() + " " + Thread.currentThread().getName()));
+//                    System.out.println(("Prime numbers " + primeNumbers.getPrimeNumbers() + " " + Thread.currentThread().getName()));
 
 
 

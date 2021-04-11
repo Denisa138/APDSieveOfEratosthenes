@@ -1,13 +1,12 @@
 package ParallelImplementation;
 
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 
-public class Sieve {
+public class SieveOfEratosthenes {
     protected Numbers numbers;
 
     public void StartSieving() throws IOException {
@@ -29,9 +28,13 @@ public class Sieve {
     }
 
     public static void main(String[] args) throws IOException {
-        Sieve mainSieve = new Sieve();
-        mainSieve.StartSieving();
+        SieveOfEratosthenes mainSieveOfEratosthenes = new SieveOfEratosthenes();
 
+        long startTime = System.currentTimeMillis();
+        mainSieveOfEratosthenes.StartSieving();
+        long endTime = System.currentTimeMillis();
+
+        System.out.println("\nTime execution: " + (endTime - startTime) + " milliseconds.");
         //Thread.getAllStackTraces().keySet().forEach((t) -> System.out.println(t.getName() + "\nIs Daemon " + t.isDaemon() + "\nIs Alive " + t.isAlive()));
     }
 }
