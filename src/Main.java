@@ -1,3 +1,5 @@
+import SequentialImplementation.Results;
+
 import java.io.IOException;
 
 public class Main {
